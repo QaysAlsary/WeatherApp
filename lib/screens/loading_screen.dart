@@ -6,6 +6,8 @@ import 'location_screen.dart';
 
 
 class LoadingScreen extends StatefulWidget {
+  const LoadingScreen({Key? key}) : super(key: key);
+
 
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
@@ -13,6 +15,7 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen> {
 
+  @override
   void initState() {
     super.initState();
     getlocationData();
@@ -39,7 +42,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: CircularProgressIndicator(),
       )
